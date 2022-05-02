@@ -1,13 +1,13 @@
 # netflix_movie_recommender
 
 # 1. Read in the datasets -  Read the data into a matrix 
-
+https://ai.vub.ac.be/irdm-project-2022/
  1:  - > movei id 
 1488844,3,2005-09-06 - > user id, rating, date (remove date)
 ## dimensions
 17K - movies & 480k - users 
 
- load only a sparse matrix that allows memeory for none-zero values 
+ load only a sparse matrix that allows memeory for none-zero values (Note: Use Scipy sparse matrix)
  
  ## 3 lists 
  ### - movieids 
@@ -16,11 +16,8 @@
  ### Note: ith user, provided ith rating for ith movie 
  
   ### Create two matrices 
-1. MOVIES rows and USERS columns,  - contents of the cells being the ratings given by the users for the movie
-2. USERS rows and MOVIES columns -
-
-
-### Note: Use Scipy sparse matrix
+1. MOVIES rows and USERS columns - short, wide matrix
+2. USERS rows and MOVIES columns - tall, thin matrix
 
 # Task 2 DimSum 
 
