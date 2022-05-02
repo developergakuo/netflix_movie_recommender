@@ -1,6 +1,6 @@
 # netflix_movie_recommender
 
-# Task 1 Read in the datasets -  Read the data into a matrix 
+# Task 1: Read in the datasets -  Read the data into a matrix 
 https://ai.vub.ac.be/irdm-project-2022/
 
 ## data format
@@ -18,7 +18,7 @@ https://ai.vub.ac.be/irdm-project-2022/
 1. MOVIES rows and USERS columns - short, wide matrix
 2. USERS rows and MOVIES columns - tall, thin matrix
 
-# Task 2 DimSum 
+# Task 2: DimSum 
 
 ### this uses the tall but slim matrix - (movies in columns, and users in rows) - good fit for DIMSUM
 
@@ -29,7 +29,7 @@ https://ai.vub.ac.be/irdm-project-2022/
 
 You have to implement the pseudocode given in the slides yourself. You can use the random Python library to generate random numbers, and NumPy and SciPy to access the sparse matrix elements, perform summations, and compute vector norms.
 
-# Task 3 
+# Task 3: Gradient Descent Computation
 
 ### This uses the wide but short matrix (movies in rows, and users in columns) - bad fit for DIMSUM
 
