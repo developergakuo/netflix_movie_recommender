@@ -1,6 +1,6 @@
 # netflix_movie_recommender
 
-# 1. Read in the datasets -  Read the data into a matrix 
+# Task 1 Read in the datasets -  Read the data into a matrix 
 https://ai.vub.ac.be/irdm-project-2022/
 
 ## data format
