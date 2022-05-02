@@ -24,6 +24,8 @@
 
 # Task 2 DimSum 
 
+### this uses the tall but slim matrix - (movies in columns, and users in rows) - good fit for DIMSUM
+
 1. For this task, consider a matrix A that has the users in rows (each row is a different user), and movies in columns (each column is a movie). This is a tall (many users) skinny (few movies) matrix, on which DIMSUM is designed to operate.
 2. Implement the DIMSUM algorithm, that will map your skinny A to a matrix of cosine similarities B, of size |movies| × |movies|.
 3. Compute an approximation of AT A from B. Slide 118 of Lecture 4 will help you.
@@ -32,6 +34,8 @@
 You have to implement the pseudocode given in the slides yourself. You can use the random Python library to generate random numbers, and NumPy and SciPy to access the sparse matrix elements, perform summations, and compute vector norms.
 
 # Task 3 
+
+### This uses the wide but short matrix (movies in rows, and users in columns) - bad fit for DIMSUM
 
 Implement a stochastic descent algorithm to optimise P and Q of an SVD (A= UΣVt), Q=U, Pt = ΣVt
  https://pantelis.github.io/cs634/docs/common/lectures/recommenders/netflix/
@@ -43,3 +47,10 @@ Perform the following sub-tasks:
 
  * Hint: A good gradient step for Batch Gradient Descent is 0.1. For Stochastic Gradient Descent, the step must be much smaller, about 1e-5 (0.00001).
 * Hint: The URL given above goes into detail explaining the gradients you need for both stochastic and batch gradient descent, and gives you the gradients of P and Q. The lecture slides provide a higher-level overview.
+
+# Task 4: Accuracy
+With your optimized P and Q produced in Task 3, you can now consider a new matrix M = QP t that will contain predicted ratings for every movie and every user. That matrix M would also consume about 30 GB of memory, so don’t compute it! Instead, feel free to multiply lines of Q and columns of P t manually to produce individual entries of M, that you can compare to the actual values in the original sparse matrix A that you produced in Task 1. This allows to measure the accuracy on the training set.
+
+1.  Compute the RMSE (root mean-squared error) between the set of training movie-user pairs and their corresponding predictions. This is the training error.
+2.   Split the sparse matrix A into a separate training and testing set, with the training set used to produce P and Q, and the testing set used to compute the RMSE. This is the testing error.
+3.   (bonus) Read probe.txt to split the Netflix dataset into training and testing sets.
