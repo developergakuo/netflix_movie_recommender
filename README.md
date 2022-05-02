@@ -20,5 +20,5 @@
 2. USERS columns and MOVIES rows -
 
 
-## Note: Use Scipy sparse matrix 
+### Note: Use Scipy sparse matrix 
  
