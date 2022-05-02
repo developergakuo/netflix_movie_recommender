@@ -4,10 +4,9 @@
 https://ai.vub.ac.be/irdm-project-2022/
 
 ## data format
- ### 1:  - > movei id 
+ ### 1:  - > movei_id: 
 ### 1488844,3,2005-09-06 - > user id, rating, date (remove date)
-## dimensions
-17K - movies & 480k - users 
+### dimensions -> 17K - movies & 480k - users 
 
  load only a sparse matrix that allows memeory for none-zero values (Note: Use Scipy sparse matrix)
  ## read in strategy 
