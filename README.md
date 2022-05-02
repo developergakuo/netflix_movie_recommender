@@ -4,9 +4,9 @@
 https://ai.vub.ac.be/irdm-project-2022/
 
 ### data format
- /n
+ <br/>
  1:  - > movei_id: 
- /n
+ <br/>
  1488844,3,2005-09-06 - > user id, rating, date (remove date)
 ### dimensions 
 17K - movies & 480k - users 
