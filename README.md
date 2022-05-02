@@ -9,13 +9,11 @@
 
  load only a sparse matrix that allows memeory for none-zero values 
  
- ### 3 lists 
+ ## 3 lists 
  ### - movieids 
  ### - userIds
  ### ratings 
- 
  ### ith user, provided ith rating for ith movie 
- 
  
   ### Create two matrices 
 1. MOVIES rows and USERS columns,  - contents of the cells being the ratings given by the users for the movie
