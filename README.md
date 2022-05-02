@@ -17,7 +17,7 @@
  
   ### Create two matrices 
 1. MOVIES rows and USERS columns,  - contents of the cells being the ratings given by the users for the movie
-2. USERS columns and MOVIES rows -
+2. USERS rows and MOVIES columns -
 
 
 ### Note: Use Scipy sparse matrix 
