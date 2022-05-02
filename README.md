@@ -4,6 +4,7 @@
 
  1:  - > movei id 
 1488844,3,2005-09-06 - > user id, rating, date (remove date)
-##
-17K - movies 
-480k - users 
+# dimensions
+17K - movies & 480k - users 
+
+ #load only a sparse matrix 
