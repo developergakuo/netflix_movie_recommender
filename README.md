@@ -13,11 +13,19 @@ https://ai.vub.ac.be/irdm-project-2022/
 17K - movies & 480k - users 
 
  load only a sparse matrix that allows memory for none-zero values (Note: Use Scipy sparse matrix)
- ### read in strategy 
- 3 lists  movieids, userIds, ratings 
- ### Note: ith user, provided ith rating for ith movie 
  
-  ### Convert the lists into two matrices
+ ### read in strategy 
+ 
+ 3 lists  - 
+ 1. movieids,
+ 2.  userIds, 
+ 3.  ratings 
+ 
+  <br/>
+ Note: ith user, provided ith rating for ith movie 
+ 
+ ### Convert the lists into two matrices
+ 
 1. MOVIES rows and USERS columns - short, wide matrix
 2. USERS rows and MOVIES columns - tall, thin matrix
 
