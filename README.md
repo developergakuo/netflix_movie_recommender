@@ -40,5 +40,6 @@ Perform the following sub-tasks:
 - Implement Stochastic Gradient Descent using information from the article linked above.
 - Add a (global) variable that allows to configure how many epochs of the algorithm will be performed. One epoch consists of computing and applying the gradient for all of the ratings in the Netflix dataset.
 - Also implement Batch Gradient Descent, that should be only a small modification of what you have written in Point 2 above. Compare the accuracy obtained by Batch and Stochastic gradient descent, de- pending on the number of epochs and the gradient step, and write your findings in the report. Make plots in your report that show how the training accuracy evolves epoch after epoch, both for Stochastic and Batch Gradient Descent. Task 4 details how to measure accuracies.
-Hint: A good gradient step for Batch Gradient Descent is 0.1. For Stochastic Gradient Descent, the step must be much smaller, about 1e-5 (0.00001).
-Hint: The URL given above goes into detail explaining the gradients you need for both stochastic and batch gradient descent, and gives you the gradients of P and Q. The lecture slides provide a higher-level overview.
+
+ * Hint: A good gradient step for Batch Gradient Descent is 0.1. For Stochastic Gradient Descent, the step must be much smaller, about 1e-5 (0.00001).
+* Hint: The URL given above goes into detail explaining the gradients you need for both stochastic and batch gradient descent, and gives you the gradients of P and Q. The lecture slides provide a higher-level overview.
