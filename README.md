@@ -49,3 +49,9 @@ With your optimized P and Q produced in Task 3, you can now consider a new matri
 1.  Compute the RMSE (root mean-squared error) between the set of training movie-user pairs and their corresponding predictions. This is the training error.
 2.   Split the sparse matrix A into a separate training and testing set, with the training set used to produce P and Q, and the testing set used to compute the RMSE. This is the testing error.
 3.   (bonus) Read probe.txt to split the Netflix dataset into training and testing sets.
+
+
+# Submission
+The deadline for the project is Sunday the 5th of June 2022, at 23:59 Brussels Time. The project is to be submitted on Canvas and must be a zip file that contains:
+1. One file that implements the 4 tasks above. It can be Python, Java, Scala, C++, C#, ... . Jupyter Notebooks are not allowed, but you can easily save a Jupyter Notebook as a Python file and submit it.
+2. A 4-pages report that presents your results, for the different tasks, both in text and figures. For the DIMSUM γ parameters and the SVD K parameters (the number of eigenvalues), we ask you to compare at least 10 different values of these parameters. Feel free to use the rest of the pages to tell us what you want us to know about your project, for instance points that were particularly difficult to do, or a description of code that you think needs an explanation. We will have read your 4-pages report before your presentation in June at a time slot during the exam period, so use these 4 pages to "pre-brief" us on your project.
