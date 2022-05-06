@@ -48,6 +48,10 @@ for file_path in movie_text_files:
     users_ids_list.append(sub_users_ids_list)
     users_ratings_list.append(sub_users_ratings_list)
 
+    # dispose unused objects 
+    del sub_users_ids_list
+    del sub_users_ratings_list
+
 print('actual ratings dims: ', len(movie_ids_list),len(users_ids_list) , len(users_ratings_list))
 
 
@@ -63,7 +67,7 @@ for lst in users_ids_list:
     #find all the users who did not rate a movie
     unrated_users = list(unique_users - set(lst))
         
-    # update the users for each movie to 
+    # update the users for each movie to include all users who have not yet rated the movie
     users_ids_list[index] = users_ids_list[index] + unrated_users
 
     # fill out the entries of users who did not rate a movie with zero 
