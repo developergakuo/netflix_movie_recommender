@@ -4,6 +4,7 @@ from scipy.sparse import csr_matrix, spdiags
 import multiprocessing
 from itertools import combinations
 import random
+
 ''' ----------------------------------------------------------------------------------------------------------------------------------------------------
 TASK 1 Read the movie ratings files into a sparse matrix 
 '''
@@ -56,7 +57,6 @@ for file_path in movie_text_files:
 
 print('actual ratings dims: ', len(movie_ids_list),len(users_ids_list) , len(users_ratings_list))
 
-
 # Create a set of all the unique users
 unique_users = set()
 for lst in users_ids_list:
@@ -93,14 +93,13 @@ TASK 2: DimSum
 m,n = tall_thin_sparse_matrix.shape
 B = np.zeros((n,n))
 
-gamma = 3 # sampling parameter 
+gamma = 10000000 # sampling parameter 
 rows = [tall_thin_sparse_matrix.getrow(i) for i in range(0,m) ]
 
 # compute the l2-norms of the columns
 columns = [tall_thin_sparse_matrix.getcol(i) for i in range(0,n)]
 column_l2_norms = [np.sqrt(column.power(2).sum()) for column in columns]
 D  = spdiags(column_l2_norms, 0, len(column_l2_norms), len(column_l2_norms))
-
 
 del columns
 
@@ -121,7 +120,6 @@ for rowi in rows:
                 else:
                     key_value_pairs[(j,k)] = [output]
 
-
 #reducer 
 for (j,k), values in key_value_pairs.items():
     denom = (column_l2_norms[j] * column_l2_norms[k])
@@ -133,10 +131,17 @@ for (j,k), values in key_value_pairs.items():
          B[j,k] =  sum(values)/gamma # estimate the expectation where probability was less than 1
 
 print('B', B)
-A_transpose_A = D @ B @ D
 
+A_transpose_A_estimate = D @ B @ D
+print('A_transpose_A_estimate', A_transpose_A_estimate)
+
+A_transpose_A = tall_thin_sparse_matrix.transpose() @ tall_thin_sparse_matrix
 print('A_transpose_A', A_transpose_A)
 
+difference_matrix = csr_matrix(A_transpose_A - A_transpose_A_estimate )
+average_min_squared_error = difference_matrix.power(2).sum()/(n*n)
+
+print('average_min_squared_error', average_min_squared_error)
 
 ''' ----------------------------------------------------------------------------------------------------------------------------------------------------
 TASK 3: Gradient Descent Computation
